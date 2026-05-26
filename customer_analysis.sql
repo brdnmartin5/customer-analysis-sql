@@ -26,6 +26,33 @@ INSERT INTO customers VALUES
 (14,'Female',24,20,77),
 (15,'Male',37,20,13);
 
+SELECT *
+FROM customers;
+
+SELECT COUNT(*) AS Total_Customers
+FROM customers;
+
+SELECT Gender, COUNT(*) AS Customer_Count
+FROM customers
+GROUP BY Gender;
+
+SELECT Gender, AVG(Spending_Score) AS Avg_Spending
+FROM customers
+GROUP BY Gender;
+
+SELECT Gender, AVG(Annual_Income) AS Avg_Income
+FROM customers
+GROUP BY Gender;
+
+SELECT 
+	CASE 
+    WHEN Age < 25 THEN 'Under 25'
+    WHEN Age BETWEEN 25 AND 40 THEN '25-40'
+    ELSE '40+'
+END AS Age_Group,
+AVG(Spending_Score) AS Avg_Spending
+FROM customers
+GROUP BY Age_Group;
 
 SELECT 
 	CASE 
@@ -36,5 +63,5 @@ END AS Age_Group,
 Gender,
 AVG(Spending_Score) AS Avg_Spending
 FROM customers
-GROUP BY Gender, Age_Group
+GROUP BY Gender, Age_Group;
     
