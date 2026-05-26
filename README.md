@@ -8,7 +8,7 @@ Analyze customer demographic and spending behavior data using SQL to identify tr
 - SQL (SELECT, GROUP BY, AVG, CASE, ORDER BY)
 
 ## Analysis Performed 
-- Counter total customers
+- Counted total customers
 - Compared spending behavior by gender
 - Calculated average income by demogrpahic groups
 - Created age-based customer segments using CASE statements
